@@ -139,6 +139,8 @@ void PreTriage::load() {
   } else {
     cout << m_lineupSize << " Records imported..." << endl;
   }
+
+  cout << endl;
 }
 void PreTriage::reg() {
   if (m_lineupSize == maxNoOfPatients) {
@@ -146,7 +148,6 @@ void PreTriage::reg() {
     return;
   }
 
-  cout << endl;
   int menuSelection = -1;
   m_pMenu >> menuSelection;
 
