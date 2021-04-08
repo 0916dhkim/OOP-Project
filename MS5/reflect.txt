@@ -1,0 +1,14 @@
+Name: Donghyeon Kim
+Email: dkim167@myseneca.ca
+ID: 151613197
+Date: 2021/04/07
+
+# Implementation Experience
+Because `CovidPatient` and `TriagePatient` classes are derived from abstract `Patient` class, it will be simple to add any new feature to those two classes in the future. For example, adding additional attributes like prescription or doctor's note can be done without modifying `CovidPatient.cpp` or `TriagePatient.cpp`. Also, adding new types of patient is simple because of this class hierarchy.
+
+I mainly used `switch` phrase and `if-else` phrase to branch my logic for different types of patients, but I did not always handle the case where unknown patient type is given. This lack of error handling can become problematic when a new type of Patient is added to the project. In my opinion, this type of logic branching is best solved by polymorphism because it requires simpler refactoring process and less prone to error.
+
+Public interface of `Time` class is intuitive, and using `Time` objects felt like I am dealing with a built-in numeric type. All arithmetic operators work as expected, and the copy-assignment is also straightforward.
+
+# Testing Experience
+It applies to all workshops, but testing procedure including user input is always time-consuming and error-prone. A tester needs to input a sequence of characters exactly as the test code expect; otherwise, the test will fail and everything needs to be done from the beginning. I wish there was an easier way to test user input in CLI or TUI environments.
