@@ -80,6 +80,7 @@ const Time PreTriage::getWaitTime(const Patient &p) const {
 }
 void PreTriage::setAverageWaitTime(const Patient &p) {
   Time currentTime, patientTicketTime(p);
+  currentTime.setToNow();
   Time *target = p.type() == 'C' ? &m_averCovidWait : &m_averTriageWait;
 
   *target = ((currentTime - patientTicketTime) +
