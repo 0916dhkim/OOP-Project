@@ -136,7 +136,7 @@ void PreTriage::load() {
   if (m_lineupSize == 0) {
     cout << "No data or bad data file!" << endl;
   } else {
-    cout << m_lineupSize << " Records imported...";
+    cout << m_lineupSize << " Records imported..." << endl;
   }
 }
 void PreTriage::reg() {
@@ -145,6 +145,7 @@ void PreTriage::reg() {
     return;
   }
 
+  cout << endl;
   int menuSelection = -1;
   m_pMenu >> menuSelection;
 
