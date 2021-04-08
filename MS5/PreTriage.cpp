@@ -161,6 +161,7 @@ void PreTriage::reg() {
     return;
   }
 
+  m_lineup[m_lineupSize++] = nextPatient;
   nextPatient->setArrivalTime();
 
   cout << "Please enter patient information: " << endl;
@@ -202,6 +203,7 @@ void PreTriage::admit() {
 
   setAverageWaitTime(*m_lineup[nextPatientIndex]);
   removePatientFromLineup(nextPatientIndex);
+  m_lineupSize--;
 }
 void PreTriage::run(void) {
   int menuSelection = -1;
