@@ -136,7 +136,7 @@ void PreTriage::load() {
   if (m_lineupSize == 0) {
     cout << "No data or bad data file!" << endl;
   } else {
-    cout << m_lineupSize << " Records imported..." << endl;
+    cout << m_lineupSize << " Records imported...";
   }
 }
 void PreTriage::reg() {
