@@ -163,7 +163,7 @@ void PreTriage::reg() {
 
   nextPatient->setArrivalTime();
 
-  cout << "Please enter patient information: ";
+  cout << "Please enter patient information: " << endl;
   nextPatient->fileIO(false);
   nextPatient->read(cin);
   cout << endl << "******************************************" << endl;
