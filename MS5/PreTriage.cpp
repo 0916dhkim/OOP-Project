@@ -39,7 +39,7 @@ ostream &PreTriage::write(ostream &ostr, bool fileIO) const {
   if (fileIO) {
     ostr << m_averCovidWait << ',' << m_averTriageWait << endl;
   } else {
-    ostr << "Saving Average Wait Time," << endl;
+    ostr << "Saving Average Wait Times," << endl;
     ostr << "   COVID Test: " << m_averCovidWait << endl;
     ostr << "   Triage: " << m_averTriageWait << endl;
   }
@@ -76,7 +76,10 @@ const Time PreTriage::getWaitTime(const Patient &p) const {
     }
   }
 
-  return averageWait * count;
+  if (count == 0) {
+    return Time();
+  }
+  return averageWait * (count - 1);
 }
 void PreTriage::setAverageWaitTime(const Patient &p) {
   Time currentTime, patientTicketTime(p);
