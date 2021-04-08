@@ -212,7 +212,6 @@ void PreTriage::admit() {
 
   setAverageWaitTime(*m_lineup[nextPatientIndex]);
   removePatientFromLineup(nextPatientIndex);
-  m_lineupSize--;
 }
 void PreTriage::run(void) {
   int menuSelection = -1;
