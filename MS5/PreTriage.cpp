@@ -45,6 +45,9 @@ ostream &PreTriage::write(ostream &ostr, bool fileIO) const {
   }
 
   // Patient info.
+  if (!fileIO) {
+    ostr << "Saving m_lineup..." << endl;
+  }
   for (int i = 0; i < m_lineupSize; i++) {
     if (!fileIO) {
       ostr << (i + 1) << "- ";
